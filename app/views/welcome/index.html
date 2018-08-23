@@ -1,0 +1,19 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.haml</p>
+<div class="pull-right">
+  <%= link_to 'Denied access', root_path(denied: true) %>
+  |
+  <%= link_to 'Enabled access', root_path %>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Example</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @pages %>
+  </tbody>
+</table>

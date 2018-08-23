@@ -1,0 +1,136 @@
+<tr id="default">
+  <td>String attribute</td>
+  <td>
+    <%= editable page, :name %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name %>
+    </code>
+  </td>
+</tr>
+<tr id="boolean">
+  <td>Boolean attribute Yes/no</td>
+  <td>
+    <%= editable page, :active %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :active %>
+    </code>
+  </td>
+</tr>
+<tr id="boolean_source">
+  <td>Boolean attribute with custom source</td>
+  <td>
+    <%= editable page, :active, data: { source: ['Active', 'Disabled'] } %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :active,  %>
+    </code>
+    <br/>
+    <code>data: { source: ['Active', 'Disabled'] }</code>
+  </td>
+</tr>
+<tr id="nested_translations">
+  <td>Globalize gem example</td>
+  <td>
+    <%= editable page, :title, nested: :translations, nid: page.translation.id %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :title, nested: :translations, nid: page.translation.id %>
+    </code>
+  </td>
+</tr>
+<tr id="select_source">
+  <td>Select from given source</td>
+  <td>
+    <%= editable page, :name, type: :select, data: { source: ['iPhone', 'iPad', 'MacBook'] } %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, type: :select, %>
+    </code>
+    <br/>
+    <code>data: { source: ['iPhone', 'iPad', 'MacBook'] }</code>
+  </td>
+</tr>
+<tr id="custom_value">
+  <td>Custom value (Upcased name)</td>
+  <td>
+    <%= editable page, :name, value: page.name.upcase %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, value: page.name.upcase %>
+    </code>
+  </td>
+</tr>
+<tr id="exception">
+  <td>Custom exception</td>
+  <td>
+    <%= editable page, :name, e: "You're not authorized" %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, e: "You're not authorized" %>
+    </code>
+  </td>
+</tr>
+<tr id="custom_title">
+  <td>Custom title</td>
+  <td>
+    <%= editable page, :name, title: 'Your name please :)' %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, title: 'Your name please :)' %>
+    </code>
+  </td>
+</tr>
+<tr id="custom_class">
+  <td>Custom class (float right)</td>
+  <td>
+    <%= editable page, :name, class: 'pull-right' %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, class: 'pull-right' %>
+    </code>
+  </td>
+</tr>
+<tr id="custom_tag">
+  <td>Custom tag (its header)</td>
+  <td>
+    <%= editable page, :name, tag: 'h3' %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :name, tag: 'h3' %>
+    </code>
+  </td>
+</tr>
+<tr id="type_textarea">
+  <td>Textarea</td>
+  <td>
+    <%= editable page, :description, type: :textarea %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :description, type: :textarea %>
+    </code>
+  </td>
+</tr>
+<tr id="type_wysihtml5">
+  <td>Wysihtml5</td>
+  <td>
+    <%= editable page, :description, type: :wysihtml5 %>
+  </td>
+  <td>
+    <code>
+      <%= editable page, :description, type: :wysihtml5 %>
+    </code>
+  </td>
+</tr>

@@ -1,0 +1,2 @@
+class PageTranslation < ApplicationRecord
+end
